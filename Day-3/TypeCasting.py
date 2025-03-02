@@ -1,0 +1,7 @@
+a = input("Enter any number in STRING: ")
+i = int(a)
+f = float(a)
+b = bool(a)
+print(f"{type(i)}: {i}")
+print(f"{type(f)}: {f}")
+print(f"{type(b)}: {b}")

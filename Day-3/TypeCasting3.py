@@ -1,0 +1,6 @@
+a = bool(input("Enter any number in BOOLEAN: "))
+i = int(a)
+s = str(a)
+print(f"Value in INTEGER formate: {i}")
+print(f"Value in STRING formate: {s}")
+print(f"Value in BOOLEAN formate: {a}")
