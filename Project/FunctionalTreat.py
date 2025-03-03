@@ -11,7 +11,7 @@ while True:
     print("7. Exit Program")
 
     choice = int(input("Please enter your choice: "))
-    l = [10,20,1,2,3,4,5]
+    l = []
 
     if choice == 1:
         def inputData():
