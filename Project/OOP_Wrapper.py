@@ -28,7 +28,7 @@ class Employee(Person):
         print(f"Employee ID: {self.eid}")
         print(f"Salary: {self.salary}")
 
-class Manager():
+class Manager(Person):
     def __init__(self,name,age,eid,salary,dep):
         self.name = name
         self.age = age
@@ -49,9 +49,9 @@ class Manager():
 def copmareSalary(e1,e2):
     print("Comparing salaries:")
     if e1.salary > e2.salary:
-        return f"{e2.post} {e2.name} {e2.id} has a lower salary than {e1.post} {e1.name} {e1.id}."
+        return f"{e2.post} {e2.name} {e2.eid} has a lower salary than {e1.post} {e1.name} {e1.eid}."
     elif e1.salary < e2.salary:
-        return f"{e1.post} {e1.name} {e1.id} has a lower salary than {e2.post} {e2.name} {e2.id}."
+        return f"{e1.post} {e1.name} {e1.eid} has a lower salary than {e2.post} {e2.name} {e2.eid}."
     else:
         print("Both have same salary.")
 
@@ -86,16 +86,16 @@ while True:
     elif choice == 2:
         eName = input("Enter Name: ")
         eAge = input("Enter Age: ")
-        eid = input("Enter Employee ID: ")
-        eSalary = input("Enter Salary: ")
+        eid = int(input("Enter Employee ID: "))
+        eSalary = int(input("Enter Salary: "))
         employee = Employee(eName,eAge,eid,eSalary)
         employeeList.append(employee)
     
     elif choice == 3:
         mName = input("Enter Name: ")
         mAge = input("Enter Age: ")
-        eid = input("Enter Employee ID: ")
-        mSalary = input("Enter Salary: ")
+        eid = int(input("Enter Employee ID: "))
+        mSalary = int(input("Enter Salary: "))
         mDepartment = input("Enter Department: ")
         manager = Manager(mName,mAge,eid,mSalary,mDepartment)
         managerList.append(manager)
@@ -127,7 +127,7 @@ while True:
         
         one = None
         two = None
-        
+
         for employee in employeeList + managerList:
             if employee.eid == firstSalary: 
                 one = employee
