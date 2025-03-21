@@ -1,6 +1,6 @@
 print("Welcome to the Robust Banking System!")
 print()
-desopit = 0
+deposit = 0
 balance = 0
 withdraw = 0
 class NegativeNumber(Exception):
@@ -10,24 +10,27 @@ class InsufficientFundsError(Exception):
     pass
 
 def depositOne():
-        if deposit<0:
-            raise NegativeNumber()
-        else:
-            balance = balance + deposit
-            print("Account created successfully!")
+    global balance,deposit
+    if deposit<0:
+        raise NegativeNumber()
+    else:
+        balance += deposit
+        print("Account created successfully!")
 
 def depositTwo():
-        if deposit<0:
-            raise NegativeNumber()
-        else:
-            balance = balance + deposit
-            print(f"Deposit successful! Your new balance is: {balance}")
+    global balance,deposit
+    if deposit<0:
+        raise NegativeNumber()
+    else:
+        balance += deposit
+        print(f"Deposit successful! Your new balance is: {balance}")
 
 def withdrawFun():
+    global balance,withdraw
     if withdraw>balance:
         raise InsufficientFundsError()
     else:
-        balance = balance - withdraw
+        balance -= withdraw
         print(f"Withdrawal successfull Your new balance is: {balance}")
         
 while True:
