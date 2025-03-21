@@ -74,7 +74,7 @@ while True:
         print(f"Your current balance is: {balance}")
 
     else:
-        print("Invalid choice........")
+        print("Error: Invalid choice. Please select a valid option.")
 
 
 
