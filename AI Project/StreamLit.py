@@ -3,7 +3,7 @@
 import google.generativeai as ai
 import streamlit as sl
 
-ai.configure(api_key="AIzaSyCHC8x_nJxGjKyCfxouRgT2KcvyTBxkvfM")
+ai.configure(api_key="apikey")
 
 sl.title("Welcome to Vansh's personal AI. Ask me anything.....")
 model = ai.GenerativeModel("gemini-2.0-flash")
